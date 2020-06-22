@@ -57,7 +57,7 @@ app.post('/repositories/:id/like', validadeId, (req, res) => {
     const repoIndex = repositories.findIndex(repository => repository.id === id);
     if(repoIndex < 0) return res.status(400).json({ error: 'Repository not found' });
     repositories[repoIndex].likes = repositories[repoIndex].likes + 1;
-    return res.json(repositories[repoIndex])
+    return res.json({ likes: repositories[repoIndex].likes })
 
 })
 
