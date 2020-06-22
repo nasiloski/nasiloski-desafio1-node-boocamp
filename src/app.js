@@ -66,3 +66,4 @@ app.listen(3333, () => {
     console.log(`API:🚀 Backend started`);
 });
 
+module.exports = app;
